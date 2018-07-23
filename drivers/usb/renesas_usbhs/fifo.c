@@ -861,6 +861,11 @@ static void xfer_work(struct work_struct *work)
 
 	usbhs_pipe_running(pipe, 1);
 	usbhs_pipe_set_trans_count_if_bulk(pipe, pkt->trans);
+<<<<<<< HEAD
+=======
+	dma_async_issue_pending(chan);
+	usbhsf_dma_start(pipe, fifo);
+>>>>>>> ea839ca2a2a1aa8bd7f481b878e0ffdeab611d88
 	usbhs_pipe_enable(pipe);
 	usbhsf_dma_start(pipe, fifo);
 	dma_async_issue_pending(chan);
