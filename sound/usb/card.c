@@ -222,7 +222,6 @@ static int snd_usb_create_streams(struct snd_usb_audio *chip, int ctrlif)
 	void *control_header;
 	int i, protocol;
 	int rest_bytes;
-<<<<<<< HEAD
 
 	usb_iface = usb_ifnum_to_if(dev, ctrlif);
 	if (!usb_iface) {
@@ -230,8 +229,6 @@ static int snd_usb_create_streams(struct snd_usb_audio *chip, int ctrlif)
 					dev->devnum, ctrlif);
 		return -EINVAL;
 	}
-=======
->>>>>>> ea6ed9244b82dc3cb9446a3be38b1dbbc0bda848
 
 	/* find audiocontrol interface */
 	host_iface = &usb_iface->altsetting[0];
